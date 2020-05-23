@@ -49,6 +49,9 @@ class Thermostat {
       if(this.temperature < 18) {
         return 'low-usage'
       }
+      if(this.temperature >= 18 && this.temperature <= this.MAX_LIMIT_PSM_ON) {
         return 'medium-usage'
+    }
+    return 'high-usage'
     }
 }
