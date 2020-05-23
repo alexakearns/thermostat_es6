@@ -87,5 +87,14 @@ describe('Thermostat', function() {
         expect(thermostat.energyUsage()).toEqual('medium-usage');
       });
     });
+    describe('when temperature is above 25', function() {
+      it('is considered high-usage', function() {
+        thermostat.switchPowerSavingModeOff();
+        for (var i = 0; i < 6; i++) {
+          thermostat.up();
+        }
+        expect(thermostat.energyUsage()).toEqual('high-usage');
+      });
+    });
   });
 });
