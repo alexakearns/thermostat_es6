@@ -45,4 +45,9 @@ class Thermostat {
     resetTemperature() {
       this.temperature = this.DEFAULT_TEMPERATURE;
     }
+    energyUsage() {
+      if(this.temperature < 18) {
+        return 'low-usage'
+      }
+    }
 }

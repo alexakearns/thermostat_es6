@@ -78,7 +78,7 @@ describe('Thermostat', function() {
         for (var i = 0; i < 3; i++) {
           thermostat.down();
         }
-        expect(thermostat.eneryUsage()).toEqual('low-usage');
+        expect(thermostat.energyUsage()).toEqual('low-usage');
       });
     });
   });
