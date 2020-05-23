@@ -8,6 +8,7 @@ class Thermostat {
         this.MAX_LIMIT_PSM_ON = 25;
         this.MAX_LIMIT_PSM_OFF = 32;
         this.DEFAULT_TEMPERATURE = 20;
+        this.MEDIUM_ENERGY_LIMIT = 18;
     }
     getCurrentTemperature() {
         return this.temperature;
@@ -49,7 +50,7 @@ class Thermostat {
       if(this.temperature < 18) {
         return 'low-usage'
       }
-      if(this.temperature >= 18 && this.temperature <= this.MAX_LIMIT_PSM_ON) {
+      if(this.temperature >= this.MEDIUM_ENERGY_LIMIT && this.temperature <= this.MAX_LIMIT_PSM_ON) {
         return 'medium-usage'
     }
     return 'high-usage'
