@@ -71,4 +71,15 @@ describe('Thermostat', function() {
       expect(thermostat.getCurrentTemperature()).toEqual(32);
     });
   });
+
+  describe('displaying usage levels', function() {
+    describe('when temperature is below 18 degrees', function() {
+      it('is considered low-usage', function(){
+        for (var i = 0; i < 3; i++) {
+          thermostat.down();
+        }
+        expect(thermostat.eneryUsage()).toEqual('low-usage');
+      });
+    });
+  });
 });
