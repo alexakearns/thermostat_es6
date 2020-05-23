@@ -41,4 +41,7 @@ class Thermostat {
     switchPowerSavingModeOn() {
         this.powerSavingMode = true;
     }
+    resetTemperature() {
+      this.temperature = 20;
+    }
 }
